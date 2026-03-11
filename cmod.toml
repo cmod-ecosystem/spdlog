@@ -1,0 +1,20 @@
+[package]
+name = "github.com/gabime/spdlog"
+version = "1.17.0"
+edition = "2023"
+description = "Fast C++ logging library"
+authors = ["Gabi Melman"]
+license = "MIT"
+
+[dependencies]
+"github.com/fmtlib/fmt" = { git = "https://github.com/cmod-ecosystem/fmt.git", branch = "cmod-support" }
+
+[toolchain]
+compiler = "clang"
+cxx_standard = "20"
+
+[build]
+type = "static-lib"
+include_dirs = ["include"]
+exclude = ["bundled_fmtlib_format.cpp"]
+extra_flags = ["-DSPDLOG_COMPILED_LIB", "-DSPDLOG_FMT_EXTERNAL"]
