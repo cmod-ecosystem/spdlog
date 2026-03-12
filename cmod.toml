@@ -9,7 +9,7 @@ name = "com.github.cmod_ecosystem.spdlog"
 root = "src/lib.cppm"
 
 [dependencies]
-"github.com/cmod-ecosystem/fmt" = "*"
+"github.com/cmod-ecosystem/fmt" = { branch = "cmod-support" }
 
 [dev-dependencies]
 
